@@ -9,7 +9,10 @@ on:
 
 jobs:
   build:
-    runs-on: shubhamdeshpande34/xcro:20.04jenkins-slave
+    runs-on: ubuntu-latest  # This specifies the runner, not the Docker image
+
+    container: # Define the container to use for the job
+      image: your-username/your-private-image:tag # Replace with your private image name and tag
 
     steps:
       - uses: actions/checkout@v4
